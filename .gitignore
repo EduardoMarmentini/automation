@@ -1,0 +1,15 @@
+# .gitignore
+
+# Ignora a pasta específica
+pc_marmentini/
+
+# Ignora arquivos comuns (opcional)
+.env
+.venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+.idea/
+.vscode/
