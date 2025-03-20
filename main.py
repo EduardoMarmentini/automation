@@ -1,4 +1,4 @@
-from flows.main_flow import main_flow  # Importa o fluxo principal
+from flows.main_flow import main_fn  # Importa o fluxo com o nome correto
 
 if __name__ == "__main__":
-    main_flow()  # Inicia o fluxo de tarefas
+    main_fn()  # Inicia o fluxo corretamente
