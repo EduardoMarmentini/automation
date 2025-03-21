@@ -1,11 +1,11 @@
 from prefect import flow
-from tasks.calculation_task import task_1
+from tasks.generation import consult_information
 
-@flow(name="automacao", log_prints=True)
+@flow(name="generation_rel_finan", log_prints=True)
 def main_fn():
     print("Start workflow")
-    result = task_1()
-    print(f"Final result from task_2: {result}")
-
+    print("-" * 50);
+    consult_information()
+    
 if __name__ == "__main__":
     main_fn()

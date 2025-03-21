@@ -1,4 +1,4 @@
 # tasks/__init__.py
-from .calculation_task import task_1, task_2
+from .generation import generation_rel, consult_information
 
-__all__ = ["task_1", "task_2"]
+__all__ = ["generation_rel", "consult_information"]

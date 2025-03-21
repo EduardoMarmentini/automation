@@ -1,11 +1,10 @@
-from flows import main_fn, secondary_flow
+from flows import main_fn
 
 if __name__ == "__main__":
-    print("Iniciando automação com múltiplos fluxos")
+    print("Iniciando automação para geração de relatórios.") 
     print("-" * 50)
 
-    main_fn()  # Executa o primeiro fluxo
-    secondary_flow()  # Executa o segundo fluxo
+    main_fn()
 
-    print("Todos os fluxos foram concluídos.")
+    print("Relatório gerado com sucesso.")  
     print("-" * 50)
