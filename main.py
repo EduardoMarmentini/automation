@@ -1,10 +1,8 @@
-from flows import main_fn
+from prefect import flow
+from tasks.generation import consult_information
 
-if __name__ == "__main__":
-    print("Iniciando automação para geração de relatórios.") 
-    print("-" * 50)
-
-    main_fn()
-
-    print("Relatório gerado com sucesso.")  
-    print("-" * 50)
+@flow(name="generation_rel_finan", log_prints=True)
+def main_fn():
+    print("Start workflow")
+    print("-" * 50);
+    consult_information()
