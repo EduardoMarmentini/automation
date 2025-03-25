@@ -17,12 +17,12 @@ pull:
 - prefect.deployments.steps.git_clone:
     repository: https://github.com/EduardoMarmentini/automation.git
     branch: main
-    access_token: '{{ prefect.blocks.secret.deployment-generation-rel-finan-generation-rel-finan-repo-token
+    access_token: '{{ prefect.blocks.secret.deployment-automation-generation-rel-finan-repo-token
       }}'
 
 # the deployments section allows you to provide configuration for deploying flows
 deployments:
-- name: generation_rel_finan
+- name: automation
   version: null
   tags: []
   concurrency_limit: null
