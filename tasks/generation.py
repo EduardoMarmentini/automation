@@ -1,6 +1,5 @@
 from prefect import task
 import requests
-import pandas as pd
 
 @task(name="consult_information", log_prints=True)
 def consult_information(): 
@@ -22,10 +21,13 @@ def consult_information():
 def generation_rel(value):
     if value:
         print("Saving Pokémon names to a file...")
-        df = pd.DataFrame(value, columns=["Name"])
-        file_path = "C:\\Users\\eduar\\Downloads\\pokemons.xlsx"
+        file_path = "C:\\Users\\eduar\\Downloads\\pokemons.txt"
         
-        df.to_excel(file_path, index=False)
+        # Escrevendo no arquivo TXT
+        with open(file_path, 'w', encoding='utf-8') as file:
+            for name in value:
+                file.write(f"{name}\n")
+        
         print(f"File saved successfully at {file_path}")
     else:
         print("No Pokémon names to save.")
