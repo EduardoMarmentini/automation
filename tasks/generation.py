@@ -24,7 +24,9 @@ def generation_rel(value):
         print("Saving Pokémon names to a file...")
         df = pd.DataFrame(value, columns=["Name"])
         file_path = "C:\\Users\\eduar\\Downloads\\pokemons.xlsx"
-        df.to_csv(file_path, index=False)
+        
+        df.to_excel(file_path, index=False, engine='openpyxl')
+        
         print(f"File saved successfully at {file_path}")
     else:
         print("No Pokémon names to save.")
